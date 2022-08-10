@@ -152,6 +152,22 @@ main {
 
 }
 
+#filtro{
+    width: 228px;
+    height: 18px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+
+    margin: 0 0 2% 13%;
+
+    color: #495057;
+
+    opacity: 0.8;
+}
 #cripto-button {
     background-color: #0A3871;
     color: #FFFFFF;
@@ -189,3 +205,69 @@ main {
     transform: scale(1.01);
     
 }
+
+@media screen and (max-width: 768px) {
+
+    .logo-header {
+        position: relative;
+        margin: 5% 0 12% 3%;
+    }
+    .textBoxOne {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        margin-left: 5%;
+        height: 350px;
+    }
+    #encripto{
+        width: 100%;
+        height: fit-content;
+    }
+    .buttons{
+        position: relative;
+        width: 100%;
+        left: 0%;
+        align-self: center;
+    }
+    #cripto-button {
+        margin-bottom: 25px;
+    }
+    .textBoxTwo {
+        position: relative;
+        width: 100%;
+        margin: 15% auto;
+        height: 200px;
+    }
+    
+    #none-context {
+        margin: 5% 0 0 5%; 
+        width: 85%;
+        align-items: center;
+    }
+    #none-picture{
+        display: none;
+    }
+
+    #decripto{
+        margin:auto;
+        width: calc(100% - 10%);
+        --height1: 600px;
+        box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.1), -10px -10px 10px 1px rgba(0, 0, 0, 0.1);
+    }
+    #copy-button {
+        --bottom: --height1;
+        left: 25%;
+    }
+    }
+
+    @media screen and (max-width: 375px) {
+
+        #copy-button {
+            width: 60%;
+            bottom: 5%;
+            left: 20%;
+        }
+        
+    }
+
+    

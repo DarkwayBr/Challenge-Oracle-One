@@ -130,7 +130,7 @@ main {
     font-weight: 400;
     font-size: 32px;
     width: 400px;
-    height: 910px;
+    height: 750px;
     left: 1000px;
     top: 40px;
     padding: 25px;
@@ -257,6 +257,11 @@ main {
     }
 
     @media screen and (max-width: 375px) {
+
+        .textBoxOne{
+            width: fit-content;
+            margin-bottom: 15%;
+        }
 
         #copy-button {
             width: 60%;

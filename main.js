@@ -3,6 +3,7 @@ function criptografia () {
     var inputValue = document.getElementById("encripto").value
     var inputValueEncrypted = document.getElementById("decripto")
     var valueEncrypted = ""
+    
 
     for (let x = 0; x < inputValue.length; x++) {
 
@@ -49,18 +50,47 @@ function decriptografia () {
 
 function copyText () {
     var copyText = document.getElementById("decripto")
-
+    
     copyText.select();
     copyText.setSelectionRange(0, 99999);
-  
+    
     navigator.clipboard.writeText(copyText.value);
-
+    
 }
 
-const textarea = document.getElementById("decripto");
-textarea.addEventListener("load", e => {
-textarea.style.height = "auto";
-let scHeight = e.target.scrollHeight;
-textarea.style.height = `${scHeight}px`;
-});
+// Resize automático do segundo textearea
 
+const encriptoArea = document.getElementById("encripto");
+const decriptoArea = document.getElementById("decripto");
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+
+encriptoArea.addEventListener("change", function (e) {
+
+    var scHeight = this.scrollHeight ;
+    console.log(scHeight)
+    if (scHeight > 200 && vw > 768){
+        decriptoArea.style.height = (Math.round((scHeight * 3.6)))+ "px"
+        console.log(decriptoArea.style.height)
+    }
+    else if (scHeight > 200 && vw == 768) {
+        decriptoArea.style.height = (Math.round((scHeight * 1.8)))+ "px"
+        console.log(decriptoArea.style.height)
+    }
+    else if (scHeight > 200 && vw == 375) {
+        decriptoArea.style.height = (Math.round((scHeight * 2.6)))+ "px"
+        console.log(decriptoArea.style.height)
+    }
+
+    if (document.getElementById("none-context").style.display != "none" && vw > 768) {
+        decriptoArea.style.height = "750px";
+
+    }
+    else if (styleDiv != "block" && vw == 768){
+        decriptoArea.style.height = "200px"
+
+    }
+    else if (styleDiv != "block" && vw == 375) {
+        decriptoArea.style.height = "200px"
+    }
+
+});

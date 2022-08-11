@@ -1,5 +1,3 @@
-
-
 function criptografia () {
 
     var inputValue = document.getElementById("encripto").value
@@ -57,5 +55,12 @@ function copyText () {
   
     navigator.clipboard.writeText(copyText.value);
 
-
 }
+
+const textarea = document.getElementById("decripto");
+textarea.addEventListener("load", e => {
+textarea.style.height = "auto";
+let scHeight = e.target.scrollHeight;
+textarea.style.height = `${scHeight}px`;
+});
+

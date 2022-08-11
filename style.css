@@ -125,18 +125,15 @@ main {
     border-radius: 32px;
     resize: none;
     align-content: flex-end;
-    
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-
     width: 400px;
     height: 910px;
     left: 1000px;
     top: 40px;
     padding: 25px;
-
 }
 
 
@@ -216,12 +213,11 @@ main {
         position: relative;
         width: 100%;
         margin: auto;
-        margin-left: 5%;
         height: 350px;
     }
     #encripto{
-        width: 100%;
-        height: fit-content;
+        width: 80%;
+        height: 320px;
     }
     .buttons{
         position: relative;
@@ -236,7 +232,8 @@ main {
         position: relative;
         width: 100%;
         margin: 15% auto;
-        height: 200px;
+        min-height: 200px;
+        overflow: hidden;
     }
     
     #none-context {
@@ -249,13 +246,12 @@ main {
     }
 
     #decripto{
-        margin:auto;
-        width: calc(100% - 10%);
-        --height1: 600px;
+        margin: auto;
+        width: 80%;
+        height: 200px;
         box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.1), -10px -10px 10px 1px rgba(0, 0, 0, 0.1);
     }
     #copy-button {
-        --bottom: --height1;
         left: 25%;
     }
     }
